@@ -4,7 +4,12 @@ jslib
 Overview
 --------
 
-``jslib`` is a package which does stuff with js libraries
+``jslib`` is a small package with few dependencies, aimed at providing
+a high quality, curated set of Javascript packages for Pyramid
+projects. In essence, a group of people have taken the work they are
+already doing, then pushing it out to share with others. This work
+includes use of `Juicer <https://github.com/cjohansen/juicer>`_ to
+increase responsiveness of apps.
 
 Installation
 ------------
@@ -16,7 +21,7 @@ Install using setuptools, e.g. (within a virtualenv)::
 Setup
 -----
 
-Once ``jslib`` is installed, you must ...
+Once ``jslib`` is installed, you must ...TODO
 
 
 More Information
@@ -27,7 +32,7 @@ More Information
 
    api.rst
    glossary.rst
-
+   overview.rst
 
 Reporting Bugs / Development Versions
 -------------------------------------
