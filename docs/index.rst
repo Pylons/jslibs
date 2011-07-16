@@ -1,10 +1,10 @@
-jslib
+jslibs
 ==========
 
 Overview
 --------
 
-``jslib`` is a small package with few dependencies, aimed at providing
+``jslibs`` is a small package with few dependencies, aimed at providing
 a high quality, curated set of Javascript packages for Pyramid
 projects. In essence, a group of people have taken the work they are
 already doing, then pushing it out to share with others. This work
@@ -16,12 +16,12 @@ Installation
 
 Install using setuptools, e.g. (within a virtualenv)::
 
-  $ easy_install jslib
+  $ easy_install jslibs
 
 Setup
 -----
 
-Once ``jslib`` is installed, you must ...TODO
+Once ``jslibs`` is installed, you must ...TODO
 
 
 More Information
@@ -37,10 +37,10 @@ More Information
 Reporting Bugs / Development Versions
 -------------------------------------
 
-Visit http://github.com/Pylons/jslib to download development or
+Visit http://github.com/Pylons/jslibs to download development or
 tagged versions.
 
-Visit http://github.com/Pylons/jslib/issues to report bugs.
+Visit http://github.com/Pylons/jslibs/issues to report bugs.
 
 Indices and tables
 ------------------

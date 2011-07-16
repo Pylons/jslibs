@@ -27,7 +27,7 @@ install_requires = [
     ]
 
 
-setup(name='jslib',
+setup(name='jslibs',
       version='0.1',
       description=('A package which does stuff with js libs'),
       long_description=README + '\n\n' + CHANGES,
@@ -49,6 +49,6 @@ setup(name='jslib',
       zip_safe=False,
       install_requires=install_requires,
       tests_require=install_requires,
-      test_suite="jslib",
+      test_suite="jslibs",
       entry_points='',
       )

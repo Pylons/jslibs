@@ -1,7 +1,7 @@
-.. _jslib_api:
+.. _jslibs_api:
 
-:mod:`jslib` API
+:mod:`jslibs` API
 ---------------------------
 
-.. automodule:: jslib
+.. automodule:: jslibs
 
