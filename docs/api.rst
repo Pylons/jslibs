@@ -5,3 +5,4 @@
 
 .. automodule:: jslibs
 
+.. autofunction:: include_jslibs
