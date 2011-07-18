@@ -24,7 +24,14 @@ except IOError:
     README = CHANGES = ''
 
 install_requires = [
+    'pyramid',
     ]
+
+test_requires = [
+    'nose',
+    'coverage',
+    ]
+
 
 
 setup(name='jslibs',
@@ -48,7 +55,7 @@ setup(name='jslibs',
       include_package_data=True,
       zip_safe=False,
       install_requires=install_requires,
-      tests_require=install_requires,
+      tests_require=install_requires+test_requires,
       test_suite="jslibs",
       entry_points='',
       )
