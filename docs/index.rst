@@ -1,8 +1,8 @@
 jslibs
 ==========
 
-Overview
---------
+Summary
+-------
 
 ``jslibs`` is a small package with few dependencies, aimed at providing
 a high quality, curated set of Javascript packages for Pyramid
