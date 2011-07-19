@@ -1,22 +1,21 @@
+from pyramid.events import NewRequest
+from pyramid.events import subscriber
+from pyramid.renderers import get_renderer
 
-def include_jslibs(config, prefix=u'jslibs_static'):
+def includeme(config):
     """
-    A hook for inclusion in a Pyramid app.
+    A hook for inclusion in a Pyramid app. You can set a
+    static_view_name by assigning a value to
+    ``jslibs.static_view_name`` in settings Defaults to:
+    ``u"jslibs_static"``
 
     config
         An instance of ``pyramid.config.Configurator`` from the calling app.
-    prefix
-        A string to use in the url.
-
-        Default: ``u"jslibs_static"``
 
 
     Example:
 
     .. code-block:: python
-
-
-        from jslibs import include_jslibs
 
         ...
 
@@ -24,44 +23,23 @@ def include_jslibs(config, prefix=u'jslibs_static'):
             ...
             config = Configurator(...)
             config.scan('myapp')
-            include_jslibs(config, prefix='aprefix')
+            config.include('jslibs')
             ...
-
     """
-    config.add_static_view(prefix, u'jslibs:resources/')
+    view_name = config.registry.settings.get(u'jslibs.static_view_name',
+                                             u'jslibs_static')
+    config.add_static_view(view_name, u'jslibs:resources/')
+    config.scan('jslibs')
 
-
-def jslibsmacros(cls):
+@subscriber(NewRequest)
+def jslibs_macros_subscriber(event):
     """
-    a decorator for use with the TemplateAPI pattern. Use it to
-    decorate the TemplateAPI class to add jslibs to your TemplateAPI
+    Adds the macros to the request object so it can then be called in
+    a template like so:
 
-    ..code-block:: python
+    .. code-block:: xml
 
-        @jslibsmacros
-        class TemplateAPI(API):
-            @reify
-            def main(self):
-                r = get_renderer('myapp.views:templates/main.pt')
-                return r.implementation()
-
-            @reify
-            def macros(self):
-                r = get_renderer('myapp.views:templates/macros.pt')
-                return r.implementation().macros
-
-    You can then call it in a template like so
-
-    ..code-block:: xml
-
-          <metal:resources metal:use-macro="tmpl.jslibs['google-cdn']" />
+          <metal:resources metal:use-macro="request.jslibs['google-cdn']" />
     """
-    from pyramid.renderers import get_renderer
-    from pyramid.decorator import reify
-    @reify
-    def jslibs(self):
-        r = get_renderer('jslibs:jslibs.pt')
-        return r.implementation().macros
-    cls.jslibs = jslibs
-    return cls
-
+    r = get_renderer('jslibs:jslibs.pt')
+    event.request.jslibs = r.implementation().macros

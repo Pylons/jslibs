@@ -21,7 +21,24 @@ Install using setuptools, e.g. (within a virtualenv)::
 Setup
 -----
 
-Once ``jslibs`` is installed, you must ...TODO
+Once ``jslibs`` is installed, you only need include it:
+
+.. code-block:: python
+
+    ...
+
+    def main(global_config, **settings):
+        ...
+        config = Configurator(...)
+        config.scan('myapp')
+        config.include('jslibs')
+        ...
+
+The macros will be available in templates like so:
+
+.. code-block:: xml
+
+    <metal:resources metal:use-macro="request.jslibs['google-cdn']" />
 
 
 More Information

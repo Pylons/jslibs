@@ -1,43 +1,53 @@
 import unittest
 
-class DummyConfig:
-    def add_static_view(self, prefix, location):
-        self.prefix = prefix
-        self.location = location
+from pyramid import testing
+from pyramid.url import static_url
 
-class TestIncludeJSlibs(unittest.TestCase):
-    def _callFUT(self, config, **kwargs):
-        from jslibs import include_jslibs
-        return include_jslibs(config, **kwargs)
+class Dummy(object):
+    def __init__(self, **kwargs):
+        self.__dict__.update(kwargs)
 
-    def test_default_include(self):
-        config = DummyConfig()
-        self._callFUT(config)
-        self.assertEquals(config.prefix, u'jslibs_static')
-        self.assertEquals(config.location, u'jslibs:resources/')
-
-    def test_prefixed_include(self):
-        config = DummyConfig()
-        self._callFUT(config, prefix='aprefix')
-        self.assertEquals(config.prefix, u'aprefix')
-        self.assertEquals(config.location, u'jslibs:resources/')
+    def get(self, value, default):
+        return self.__dict__.get(value, default)
 
 
-class TestMacroDecorator(unittest.TestCase):
-    def _makeOne(self):
-        class Dummy:
-            pass
-        from jslibs import jslibsmacros
-        cls = Dummy()
-        return jslibsmacros(cls)
+class TestMacrosSubscriber(unittest.TestCase):
+    def setUp(self):
+        self.config = testing.setUp()
+        self.config.begin()
 
-    def test_reified(self):
-        from pyramid.decorator import reify
-        decorated = self._makeOne()
-        self.assertEquals(type(decorated.jslibs), reify)
-        self.assertTrue(hasattr(decorated.jslibs, 'wrapped'))
-        self.assertRaises(ValueError, decorated.jslibs.wrapped, decorated)
+    def tearDown(self):
+        self.config.end()
+
+    def test_it(self):
+        from jslibs import jslibs_macros_subscriber
+        self.config.testing_add_renderer("jslibs:jslibs.pt")
+        event = Dummy(request=testing.DummyRequest())
+        jslibs_macros_subscriber(event)
+        self.assertTrue(hasattr(event.request, 'jslibs'))
 
 
+class TestIncludeMe(unittest.TestCase):
+    def setUp(self):
+        self.config = testing.setUp()
+        self.config.begin()
+
+    def tearDown(self):
+        self.config.end()
+
+    def test_it_default(self):
+        from jslibs import includeme
+        request = testing.DummyRequest()
+        includeme(self.config)
+        url = static_url(u'jslibs:resources/', request)
+        self.assertEqual(url, u'http://example.com/jslibs_static/')
+
+    def test_it_with_name(self):
+        from jslibs import includeme
+        request = testing.DummyRequest()
+        self.config.registry.settings['jslibs.static_view_name'] = 'aname'
+        includeme(self.config)
+        url = static_url(u'jslibs:resources/', request)
+        self.assertEqual(url, u'http://example.com/aname/')
 
 

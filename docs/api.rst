@@ -5,4 +5,6 @@
 
 .. automodule:: jslibs
 
-.. autofunction:: include_jslibs
+.. autofunction:: includeme
+
+.. autofunction:: jslibs_macros_subscriber
