@@ -37,6 +37,8 @@ def juice_jslibs():
     run_juicer(os.path.join(externals_dir, 'jquery-ui', 'jquery-ui-1.9m5-smoothness-themeonly.css'), output=resources_dir) 
     run_juicer(os.path.join(externals_dir, 'jquery-ui', 'jquery-ui-1.9m5-smoothness.css'), output=resources_dir) 
 
+    # jQuery 1.6.2 + jquery-ui 1.9m5 combo
+    run_juicer(os.path.join(externals_dir, 'jquery-ui', 'jquery-1.6.2-jquery-ui-1.9m5.js'), output=resources_dir) 
 
 def main(argv=sys.argv):
     if len(argv) > 1:
