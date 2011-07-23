@@ -60,5 +60,6 @@ setup(name='jslibs',
       entry_points="""\
         [console_scripts]
             juice_jslibs = jslibs.juice_jslibs:main
+            jslibs_prepare_sources = jslibs.jslibs_prepare_sources:main
         """,
       )
