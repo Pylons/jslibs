@@ -25,3 +25,7 @@
 @import url("1.9m5/themes/base/jquery.ui.tabs.css");
 @import url("1.9m5/themes/base/jquery.ui.tooltip.css");
 
+/* Extras, not currently in release */
+@import url("1.9m5-extras/jquery.ui.selectmenu.css");
+
+

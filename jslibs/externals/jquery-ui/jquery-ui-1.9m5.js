@@ -49,5 +49,10 @@
 *     @depends 1.9m5/ui/jquery.effects.slide.js
 *     @depends 1.9m5/ui/jquery.effects.transfer.js
 * 
+* Extras, not currently in release:
+*     @depends 1.9m5-extras/jquery.ui.selectmenu.js
+*
+*
+*
 */
 
