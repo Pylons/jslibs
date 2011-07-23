@@ -57,5 +57,8 @@ setup(name='jslibs',
       install_requires=install_requires,
       tests_require=install_requires+test_requires,
       test_suite="jslibs",
-      entry_points='',
+      entry_points="""\
+        [console_scripts]
+            juice_jslibs = jslibs.juice_jslibs:main
+        """,
       )
