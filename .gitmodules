@@ -1,0 +1,4 @@
+[submodule "jslib/externals/jquery/1.6.2"]
+	path = jslib/externals/jquery/1.6.2
+	url = https://github.com/jquery/jquery.git
+
