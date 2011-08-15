@@ -16,7 +16,7 @@
 @import url("1.9m5/themes/base/jquery.ui.datepicker.css");
 @import url("1.9m5/themes/base/jquery.ui.dialog.css");
 @import url("1.9m5/themes/base/jquery.ui.menu.css");
-@import url("1.9m5/themes/base/jquery.ui.menubar.css");
+/*@ NOT import url("1.9m5/themes/base/jquery.ui.menubar.css");*/ /*NOT in m5 yet!*/
 @import url("1.9m5/themes/base/jquery.ui.progressbar.css");
 @import url("1.9m5/themes/base/jquery.ui.resizable.css");
 @import url("1.9m5/themes/base/jquery.ui.selectable.css");
