@@ -5,3 +5,6 @@
 [submodule "jslibs/externals/jquery-ui/1.9m5"]
 	path = jslibs/externals/jquery-ui/1.9m5
 	url = https://github.com/jquery/jquery-ui.git
+[submodule "jslibs/externals/slickgrid/v2.0a-jslibrev1"]
+	path = jslibs/externals/slickgrid/v2.0a-jslibrev1
+	url = https://github.com/mleibman/SlickGrid.git
