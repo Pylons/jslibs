@@ -1,6 +1,13 @@
 Next release
 ============
 
+ - ...
+   [...]
+   
+
+0.1 (2011-08-16)
+----------------
+
  - Add SlickGrid v2.0a
 
  - Fix jquery-ui 1.9m5, which by mistake slided up to 1.9pre trunk.
@@ -8,7 +15,9 @@ Next release
 
  - TBD
 
+
 0.1 (2011-07-29)
 ----------------
 
 - Initial release
+
