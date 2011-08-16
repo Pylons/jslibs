@@ -40,6 +40,11 @@ def juice_jslibs():
     # jQuery 1.6.2 + jquery-ui 1.9m5 combo
     run_juicer(os.path.join(externals_dir, 'jquery-ui', 'jquery-1.6.2-jquery-ui-1.9m5.js'), output=resources_dir) 
 
+    # SlickGrid v2.0a jslibrev1
+    run_juicer(os.path.join(externals_dir, 'slickgrid', 'slickgrid-v2.0a-jslibrev1.js'), output=resources_dir) 
+    run_juicer(os.path.join(externals_dir, 'slickgrid', 'slickgrid-v2.0a-jslibrev1.css'), output=resources_dir) 
+
+
 def main(argv=sys.argv):
     if len(argv) > 1:
         raise RuntimeError, 'juice_jslibs accepts no parameters.'
