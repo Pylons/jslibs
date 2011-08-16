@@ -98,3 +98,5 @@ Contributors
 ------------
 
 - Reed O'Brien, 2011/07/14
+- Balazs Ree <ree@greenfinity.hu> 2011/07/16
+
