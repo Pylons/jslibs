@@ -35,7 +35,7 @@ test_requires = [
 
 
 setup(name='jslibs',
-      version='0.2',
+      version='0.3',
       description=('A package which does stuff with js libs'),
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
@@ -53,9 +53,9 @@ setup(name='jslibs',
       license="BSD-derived (http://www.repoze.org/LICENSE.txt)",
       packages=find_packages(),
       include_package_data=True,
-      package_data={
-        '': ['resources/*.js', 'resources/*.css'],
-        },
+      #package_data={
+      #  '': ['*.js', '*.css'],
+      #  },
       zip_safe=False,
       install_requires=install_requires,
       tests_require=install_requires+test_requires,

@@ -5,7 +5,14 @@ Next release
    [...]
    
 
-0.1 (2011-08-16)
+0.3 (2011-08-21)
+----------------
+
+- Make a release that actually contain our resources (both setuptools and distribute
+  are principally broken with regards to handling 'data files')
+  [ree]
+
+0.2 (2011-08-16)
 ----------------
 
  - Add SlickGrid v2.0a
