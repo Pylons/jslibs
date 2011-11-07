@@ -8,3 +8,6 @@
 [submodule "jslibs/externals/slickgrid/v2.0a-jslibrev1"]
 	path = jslibs/externals/slickgrid/v2.0a-jslibrev1
 	url = https://github.com/mleibman/SlickGrid.git
+[submodule "docs/_themes"]
+	path = docs/_themes
+	url = git://github.com/Pylons/pylons_sphinx_theme.git
