@@ -6,7 +6,7 @@
 *
 *
 * Static loading:
-*     @depends jquery.tinysafe.js
+*     @depends 3.4.7-extras/jquery.tinysafe.js
 *
 * Editor and theme:
 *     @depends 3.4.7/jscripts/tiny_mce/tiny_mce_src.js
