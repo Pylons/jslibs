@@ -11,3 +11,6 @@
 [submodule "docs/_themes"]
 	path = docs/_themes
 	url = git://github.com/Pylons/pylons_sphinx_theme.git
+[submodule "jslibs/externals/tinymce/3.4.7"]
+	path = jslibs/externals/tinymce/3.4.7
+	url = https://github.com/tinymce/tinymce.git
