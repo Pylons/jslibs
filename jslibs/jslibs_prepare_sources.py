@@ -21,6 +21,7 @@ def update_submodule(dir):
     finally:
         os.chdir(current_dir)
 
+
 def prep_jquery(dir):
     # from jQuery Makefile:
     #@@sed '/EXPOSE/r src/sizzle-jquery.js' ${SIZZLE_DIR}/sizzle.js | grep -v window.Sizzle > ${SRC_DIR}/selector.js
@@ -31,6 +32,17 @@ def prep_jquery(dir):
         elif 'window.Sizzle' not in line:
             outf.write(line)
     outf.close()
+
+
+def prep_tinymce(dir):
+    # run 'ant' in the source directory
+    current_dir = os.getcwd()
+    os.chdir(dir)
+    try:
+        subprocess.call(('ant', ))
+    finally:
+        os.chdir(current_dir)
+
 
 def prepare_sources():
     # Need to update the submodules.
@@ -46,6 +58,10 @@ def prepare_sources():
     update_submodule(os.path.join(externals_dir, 'jquery', '1.6.2'))
     # it also requires some special preparation
     prep_jquery(os.path.join(externals_dir, 'jquery', '1.6.2'))
+
+    # TinyMCE 3.4.7
+    # needs its main js precompiled
+    prep_tinymce(os.path.join(externals_dir, 'tinymce', '3.4.7'))
 
 
 def main(argv=sys.argv):
