@@ -4,6 +4,13 @@ Next release
  - ...
    [...]
    
+- Add tinymce 3.4.7
+  Notes: only a static mix containing some selected plugins, is provided.
+  [ree]
+
+- Add extra resources to be used with bottlecap
+  [ree]
+
 
 0.3 (2011-08-21)
 ----------------
