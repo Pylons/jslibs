@@ -44,6 +44,14 @@ def juice_jslibs():
     run_juicer(os.path.join(externals_dir, 'slickgrid', 'slickgrid-v2.0a-jslibrev1.js'), output=resources_dir) 
     run_juicer(os.path.join(externals_dir, 'slickgrid', 'slickgrid-v2.0a-jslibrev1.css'), output=resources_dir) 
 
+    # TinyMCE 3.4.7, static version with selected plugins only
+    run_juicer(os.path.join(externals_dir, 'tinymce', 'tinymce-3.4.7-jquery-static-plugins1.js'), output=resources_dir) 
+    ##run_juicer(os.path.join(externals_dir, 'tinymce', 'tinymce-3.4.7-jquery-static-defaultskin.css'), output=resources_dir) 
+
+    # Bottlecap extra resources rev 0, contains jQuery 1.6.2 and ui.widget.js from jquery-ui 1.9m5
+    run_juicer(os.path.join(externals_dir, 'bottlecap-extras', 'bottlecap-head-0-jquery-1.6.2.js'), output=resources_dir) 
+    run_juicer(os.path.join(externals_dir, 'bottlecap-extras', 'bottlecap-tail-0.js'), output=resources_dir) 
+
 
 def main(argv=sys.argv):
     if len(argv) > 1:
