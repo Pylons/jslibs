@@ -5,6 +5,14 @@ Next release
    [...]
    
 
+0.5 (2012-01-13)
+----------------
+
+- 0.5 is same as 0.4 (make sure that no 0.4 egg stays, because a broken 0.4 egg
+  has been uploaded to pypi)
+  [ree]
+
+
 0.4 (2012-01-13)
 ----------------
 
