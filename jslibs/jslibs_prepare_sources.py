@@ -63,6 +63,11 @@ def prepare_sources():
     # needs its main js precompiled
     prep_tinymce(os.path.join(externals_dir, 'tinymce', '3.4.7'))
 
+    # TinyMCE 3.4.8
+    # needs its main js precompiled
+    prep_tinymce(os.path.join(externals_dir, 'tinymce', '3.4.8'))
+
+
 
 def main(argv=sys.argv):
     if len(argv) > 1:
