@@ -5,6 +5,14 @@ Next release
    [...]
    
 
+0.6 (2012-02-15)
+----------------
+
+- Add tinymce 3.4.8
+  Notes: only a static mix containing some selected plugins, is provided.
+  [ree]
+
+
 0.5 (2012-01-13)
 ----------------
 
