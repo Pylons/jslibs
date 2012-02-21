@@ -4,6 +4,7 @@
 * You have to use juicer to produce a minified resource based on this file
 * You cannot use this file as a development resource
 *
+* ... Like plugins1, but without the broken autosave plugin.
 *
 * Static loading:
 *     @depends 3.4.8-extras/jquery.tinysafe.js
@@ -31,9 +32,5 @@
 *
 * Table plugin:
 *     @depends 3.4.8/jscripts/tiny_mce/plugins/table/editor_plugin_src.js
-*
-* Autosave plugin:
-*     @depends 3.4.8/jscripts/tiny_mce/plugins/autosave/editor_plugin_src.js
-*     @depends 3.4.8/jscripts/tiny_mce/plugins/autosave/langs/en.js
 *
 */
