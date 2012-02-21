@@ -5,6 +5,16 @@ Next release
    [...]
  
 
+0.8 (2012-02-21)
+----------------
+
+- Add a second plugin mix for tinymce 3.4.8, without the broken
+  autosave plugin. (If this plugin loads together with the fixed
+  plugin, it will not let the user leave some pages, even if,
+  the plugin itself won't get deployed.)
+  [ree]
+
+
 0.7 (2012-02-16)
 ----------------
 
