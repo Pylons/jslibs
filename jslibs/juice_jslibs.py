@@ -50,6 +50,7 @@ def juice_jslibs():
 
     # TinyMCE 3.4.8, static version with selected plugins only
     run_juicer(os.path.join(externals_dir, 'tinymce', 'tinymce-3.4.8-jquery-static-plugins1.js'), output=resources_dir) 
+    run_juicer(os.path.join(externals_dir, 'tinymce', 'tinymce-3.4.8-jquery-static-plugins2.js'), output=resources_dir) 
     run_juicer(os.path.join(externals_dir, 'tinymce', 'tinymce-3.4.8-popup-utils.js'), output=resources_dir) 
     ##run_juicer(os.path.join(externals_dir, 'tinymce', 'tinymce-3.4.8-jquery-static-defaultskin.css'), output=resources_dir) 
 
