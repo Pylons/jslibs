@@ -17,3 +17,6 @@
 [submodule "jslibs/externals/tinymce/3.4.8"]
 	path = jslibs/externals/tinymce/3.4.8
 	url = https://github.com/tinymce/tinymce.git
+[submodule "jslibs/externals/tinymce/3.5b3"]
+	path = jslibs/externals/tinymce/3.5b3
+	url = https://github.com/tinymce/tinymce.git
