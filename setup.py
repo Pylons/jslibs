@@ -35,7 +35,7 @@ test_requires = [
 
 
 setup(name='jslibs',
-      version='0.9',
+      version='0.10',
       description=('A package which does stuff with js libs'),
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
